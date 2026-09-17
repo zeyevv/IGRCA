@@ -1,0 +1,103 @@
+{
+  "data_seed": 2026082255,
+  "optimization_seed": 2026182255,
+  "seed_selection": "Post-hoc highest mean IGRCA Avg*@500 over q1/q3 anchors among ten seeds; demonstration only.",
+  "dataset": {
+    "training_size": 10,
+    "testing_size": 100,
+    "T": 2000,
+    "m": 12,
+    "num_vars": 10,
+    "mul": 10.0,
+    "adlength": 1,
+    "adtype": "non_causal",
+    "noise_scale": 1.0,
+    "dependent_features": 0
+  },
+  "model": {
+    "beta": 0.5,
+    "causal_quantile": 0.8,
+    "decoder_alpha": 0.5,
+    "decoder_gamma": 0.5,
+    "decoder_lambda": 0.5,
+    "encoder_alpha": 0.5,
+    "encoder_gamma": 0.5,
+    "encoder_lambda": 0.5,
+    "epochs": 1000,
+    "hidden_layer_size": 50,
+    "initial_level": 0.98,
+    "lr": 0.0001,
+    "num_candidates": 100,
+    "num_hidden_layers": 8,
+    "num_vars": 10,
+    "recon_threshold": 0.95,
+    "risk": 0.01,
+    "root_cause_threshold_decoder": 0.99,
+    "root_cause_threshold_encoder": 0.99,
+    "stride": 1,
+    "window_size": 5,
+    "stage1_epochs": 140,
+    "lr_stage2": 5e-05,
+    "intervention_lambda": 0.1
+  },
+  "conditions": {
+    "q1": {
+      "q": 1,
+      "R": 5,
+      "delta": 0.5,
+      "data_hashes": {
+        "train": "5e0371295aac3b924d120c2f22d0aa580e2b151be54015d1e5d10005f12bb23c",
+        "validation": "0819eb44ae80cb5d453d75edb4544a905a73f9273250274330e037ffa62c4e18",
+        "test_normal": "9ad83a2e7d318c8597e4bda27826340ebb89daa79aaef3d33da4230920e0c3a7",
+        "test_abnormal": "672f6e7ed7d1b82d4c609433f91de049ec12434b0c0862edd4fe68e52779962d",
+        "labels": "5b8632984da8cb039ef0cab0baaede925d4ef5e4bcb9d4d906881a5931d51629",
+        "graph": "7ae7dfea6fc88a38d539d66760ce0c842dddf186cfc1d4e04151261337d037d7"
+      },
+      "checkpoint_hashes": {
+        "model.pt": "4949bd93c1ad0d5820d0f940ae8cbf7acfd0324ae970262564b3d59c86eca2d7",
+        "residual_stats.npz": "f41cddbfd2baf7f7e75c75f695f26979a0f6d0821b7be0a4453f53504a48fadb"
+      },
+      "reference_rca": {
+        "AC@1": 1.0,
+        "AC@3": 1.0,
+        "AC@5": 1.0,
+        "AC@10": 1.0,
+        "Avg@10": 1.0,
+        "AC*@1": 0.89,
+        "AC*@10": 0.8358214285714282,
+        "AC*@100": 0.9703968253968256,
+        "AC*@500": 0.9870198412698413,
+        "Avg*@500": 0.9755960952380951
+      }
+    },
+    "q3": {
+      "q": 3,
+      "R": 5,
+      "delta": 0.5,
+      "data_hashes": {
+        "train": "ad352afd20bd2e454d7276b76783bd5e5daa86a335510b6b94cd15d7bcba5cfb",
+        "validation": "84a23c83454da686007264842aaf7c5ce9c15c563dbba6e119fb3be71362f2d6",
+        "test_normal": "11bf40df80b770e80d8f1c0d7e60a1484e68cbcd2b97a9f79337b785516da319",
+        "test_abnormal": "9e58baf281dfbb6fc8e815de219bcc5048cd265dd1f6fec209d15fcf37fe3e42",
+        "labels": "5b8632984da8cb039ef0cab0baaede925d4ef5e4bcb9d4d906881a5931d51629",
+        "graph": "7ae7dfea6fc88a38d539d66760ce0c842dddf186cfc1d4e04151261337d037d7"
+      },
+      "checkpoint_hashes": {
+        "model.pt": "36ffb8d7baf4afaeb118a7f3e2fa0da795cf70b41cf896bf4b519c0c4c97d029",
+        "residual_stats.npz": "115bc89a990a87c75e7e418d924d0ce7038ac74b87f4957c2ebeead13c1a1478"
+      },
+      "reference_rca": {
+        "AC@1": 1.0,
+        "AC@3": 0.995,
+        "AC@5": 1.0,
+        "AC@10": 1.0,
+        "Avg@10": 0.999,
+        "AC*@1": 0.95,
+        "AC*@10": 0.8299761904761904,
+        "AC*@100": 0.9623968253968255,
+        "AC*@500": 0.9761468253968253,
+        "Avg*@500": 0.9658384523809521
+      }
+    }
+  }
+}
