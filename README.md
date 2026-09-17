@@ -15,10 +15,7 @@ Use the versions in `requirements.txt` (recorded environment: Linux, Python
 The default device is `cuda:0`; use `--device cpu` if needed. Set
 `CUDA_VISIBLE_DEVICES=1` to restrict a multi-GPU machine to physical GPU 1.
 
-Configuration: `config.json`. Data seed: **2026082255**; training seed:
-**2026182255**, selected post hoc for the highest mean IGRCA Avg*@500 over
-the two anchor settings among ten seeds. This is a selected-seed demonstration,
-not a multi-seed average. Training uses 8/2 healthy train/validation sequences
+Configuration: `config.json`. Training uses 8/2 healthy train/validation sequences
 of length 2,000, 100 test sequences, and 140/860 maximum Stage 1/2 epochs.
 It replays the archived supplementary settings, not every original paper table.
 
